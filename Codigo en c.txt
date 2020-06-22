@@ -1,97 +1,74 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
 
 int main(){
-	int n, x, opcion;
-	char c[2];
-	int t[2], h[2];
-	int i;
-	
+	int n, opcion;
 	
 	do{
-	 printf("\n\n------------SISTEMA DE CINE----------");
-		printf("\n\n 1. Boletos");
-        printf("\n 2. Dulceria");
-        printf("\n 3. Cartelera");
-        printf("\n 4. Fuciones");
-        printf("\n 5. Estrenos");
-        printf("\n 6. Promociones");
-        printf("\n 7. Descuentos");
-        printf("\n 8. Estacionamiento");
-        printf("\n 9. AYUDA");
-        printf("\n 10. Salir");
-	  
+	 printf("\n\n------------ MENU DE ARBOL GENEALOGICO----------");
+		printf("\n\n 1. Abuelos");
+        printf("\n 2. Tios");
+        printf("\n 3. Primos");
+        printf("\n 4. Sobrinos");
+        printf("\n 5. Padres");
+        printf("\n 6. Hermano y yo");
+        printf("\n 7. Arbol Genealogico");
+        printf("\n 8. Salir");
+      
 		 printf("\n\n Selecciona una opcion: ");
                 
             scanf("%d", &opcion);
 
         switch (opcion)
         {
-            case 1: printf("\nBoletos: ");
-                    scanf("%d", &n);
-                    printf( "\nTus boletos son: %d",n);
+            case 1: printf("\n                                                 ----------Abuelos Maternos----------");
+                    printf("\n \n                                                 Luis(Abuelo)----Juana(Abuela) ");
                     break;
 
-            case 2: printf("\n--------Dulceria----------\n1. Gomitas\n2. Lunetas\n3. Chocolate\n4. Cacahuates\n5. Helados\n Selecciona tus dulces: ");
-                    scanf("%d", &n);
-                    printf("\n Tus dulces es: %d ",n);
+            case 2: printf("\n-----------------------------------------------------------Tios--------------------------------------------------------------");
+                    printf("\n\n   Martha--|--Rodrigo       Alejandro       Erika--|--Jose       Leticia----Benjamin       Maria--|--Fernando       Juan");
                     break;
 
-            case 3: printf("\n--------Cartelera---------\n1. Avengers\n2. Creed\n3. Iron man\n4. Volver al futuro ");
+            case 3: printf("\n---------------------------------------------------Primos-------------------------------------------------");
+                    printf("\n\n   Claudia--|--Edgar  Martha  Rocio--|--Luis       Erick     Diana      Jessica--|--Angel    Fernando ");
                     break;
                     
-            case 4:  
-			        printf("\n--------Funciones----------\n1. Avengers\n Funciones disponibles:\n   1. 14:00 - 16:30\n   2. 15:45 - 18:20\n2. Creed\n Funciones disponibles:\n   1. 14:00 - 16:30\n   2. 15:45 - 18:20");
-                    printf("\n3. Iron man:\n Funciones disponibles:\n   1. 14:00 - 16:30\n   2. 15:45 - 18:20\n3. Volver al fututo:\n Funciones disponibles:\n   1. 14:00 - 16:30\n   2. 15:45 - 18:20 ");
-                    printf("\n\nSeleciona una pelicula: ");
-				    scanf("%d", &n);
-                    printf("Selecciona tu funcion: ");
-                    scanf("%d", &x);
-                    printf("Tu pelicula y funcion es: %d  %d ",n,x);
+            case 4: printf("\n-------------------------Sobrinos-----------------------------");
+                    printf("\n\n   Mateo      Santiago      Rodrigo       Leonardo    Elias");
                     break;
-                  
-			case 5: printf("\n---------Estrenos----------\n1. Zonic\n2. Spiderman\n3. Patera negra\n4. Mr. robot   ");
+                    
+			case 5: printf("\n                                                    ---------Padres----------");
+                    printf("\n\n                                                       Napoleon----Rosa");
                     break;
                     	    
-            case 6: printf("\n---------Promociones----------\n1. 2x1 en boletos\n2. ICE a solo 30 pesos");
-                    printf("\n Selecciona una promocion: ");
-                    scanf("%d", &n );
-                    printf("\nTu promocion es: %d", n);
-                    break;
-            
-			case 7: printf("\n---------Descuentos----------\n1. Descuento en combo amigos\n2. Descuento en combo familiar\n Selecciona tu descuento:  ");
-                    scanf( "%d", &n );
-                    printf("\n Haz seleccionado en descuento: %d", n);
-                    break;
+            case 6: printf("\n                                                  ---------Hermano y yo----------");
+                    printf("\n\n                                                        Jonathan    Cesar");
+                    break; 
                  
-			case 8: printf("\n------------Estacionamiento----------\n Ingresa tu numero de boleto de estacionamiento: ");
-                    scanf("%s", &c );
-                    printf("\n Numero de boleto: %s", c);
-                   
-				    srand(time(NULL));
-                    for(i=0;i<1;i++){
-                    	h[i]=1+rand()%(60-1+1);
-                    	printf("\n Tiempo: %d minutos", h[i]);
-                    
-					float r;	
-                    	r= h[i] * 1.50;
-                    	printf("\n Total a pagar: %.2f", r);
-					}  
-                    break;
-                  
-			case 9: printf("\n-------------Soporte tecnico----------\n1. No funciona el sistemas\n2. No detecta las opciones\n Cual es tu problema:  ");
-                    scanf("%d", &n );
-                    printf("\n Se esta trabajando en ello");
-                    break;
-                  
-			case 10: printf("\n Fin ");
+            case 7: printf("                                                                          --------Abuelos----------");
+                    printf("\n                                                             Luis(Abuelo Materno)--|--Juana(Abuela Materna)");
+                    printf("\n                    ------------------------------------------------------------------------------------------------------------------------------------------------");
+                    printf("\n                    |                             |              |                       |               |                           |                             |");
+                    printf("\n            Martha--|--Rodrigo                 Alejandro       Erika--|--Jose            |            Leticia----Benjamin          Maria--|--Fernando            Juan ");
+                    printf("\n |------------------|----------------|                           |---------|             |                                         |--------------------|        ");
+                    printf("\nClaudia--|--Edgar  Martha  Rocio--|--Luis                      Erick     Diana           |                                       Jessica--|--Angel    Fernando             ");
+                    printf("\n  |-----------|                   |                                                      |                                         |-----------|                                         ");
+                    printf("\nMateo      Santiago            Rodrigo                                                   |                                        Leonardo    Elias          ");
+                    printf("\n                                                                                         | ");
+					printf("\n                                                                     ------------------Padres---------------");        
+                    printf("\n                                                                                 Napoleon--|--Rosa");
+                    printf("\n                                                                                    |----------|");
+					printf("\n                                                                                  Jonathan    Cesar      ");  
+					  		break;
+             
+       
+			case 8: printf("\n Fin");
 			break;
-                   default: printf("  invalido"); 
+                   default: printf("   invalido"); 
                   break;  	    	    	                    
          }
 
-    } while ( opcion != 10 );
+    } while ( opcion != 8 );
 
     return 0;
 }
